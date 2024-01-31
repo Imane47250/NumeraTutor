@@ -7,11 +7,8 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash
 from werkzeug.security import check_password_hash
 from flask import Flask, render_template, redirect, url_for, flash, session
-from sqlalchemy.engine.url import URL, make_url
-from sqlalchemy.exc import NoSuchModuleError
 
 
-import os
 import uuid
 
 
@@ -24,11 +21,7 @@ app.secret_key = 'wa9afa_7imaRo_juhha_fl3gbA'
 
 # Configure SQLAlchemy
 
-
-
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
-
-
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/imaneelaceri/Desktop/Numera/backend/instance/users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize SQLAlchemy

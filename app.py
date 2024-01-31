@@ -10,17 +10,6 @@ from flask import Flask, render_template, redirect, url_for, flash, session
 from sqlalchemy.engine.url import URL, make_url
 from sqlalchemy.exc import NoSuchModuleError
 
-db_url = os.environ.get('DATABASE_URL')
-if db_url:
-    if db_url.startswith("postgres://"):
-        db_url = db_url.replace("postgres://", "postgresql://", 1)
-    try:
-        db_url = make_url(db_url)
-    except NoSuchModuleError:
-        raise Exception("Invalid database URL")
-else:
-    raise Exception("DATABASE_URL not found")
-
 
 import os
 import uuid
@@ -36,7 +25,9 @@ app.secret_key = 'wa9afa_7imaRo_juhha_fl3gbA'
 # Configure SQLAlchemy
 
 
-app.config['SQLALCHEMY_DATABASE_URI'] = str(db_url)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 

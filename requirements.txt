@@ -1,6 +1,6 @@
 blinker==1.7.0
 click==8.1.7
-distlib @ file:///private/tmp/python-distlib-20231212-4643-rs59kw/distlib-0.3.8
+distlib==0.3.8
 dnspython==2.5.0
 email-validator==2.1.0.post1
 filelock @ file:///private/tmp/python-filelock-20231112-5255-1qu5zmd/filelock-3.13.1/dist/filelock-3.13.1-py3-none-any.whl#sha256=57dbda9b35157b05fb3e58ee91448612eb674172fab98ee235ccb0b5bee19a1c

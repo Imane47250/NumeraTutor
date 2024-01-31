@@ -21,7 +21,7 @@ app.secret_key = 'wa9afa_7imaRo_juhha_fl3gbA'
 
 # Configure SQLAlchemy
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///tmp/users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/mydatabase.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Initialize SQLAlchemy

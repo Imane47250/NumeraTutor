@@ -1,0 +1,510 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    padding-top: 60px;
+    
+}
+
+header {
+    background-color: rgb(82, 18, 232);
+    color: white;
+    padding: 1em 0;
+    position: fixed; /* Fixes the header at the top */
+    top: 0;          /* Aligns the header to the top of the page */
+    width: 100%;     /* Ensures the header stretches across the full width */
+    z-index: 1000;   /* Ensures the header stays on top of other elements */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6px;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav a, .auth-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* Adjust spacing as needed */
+}
+
+.auth-links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#logo {
+    width: 100px; /* Adjust size as needed */
+    margin-right: 1px;
+}
+
+#hero {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #f8f8f8;
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+#how-it-works {
+    background-color: rgb(175, 182, 218);
+    padding: 2em;
+    text-align: center;
+}
+
+#how-it-works h2,
+#how-it-works p {
+    margin-bottom: 1em; /* Spacing below title and sentence */
+}
+
+.how-it-works-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.how-it-works-image {
+    width: 30%; /* Adjust as needed */
+    height: auto;
+    margin-left: 300px; /* Space between image and text */
+}
+
+.how-it-works-content {
+    width: 45%;
+    display: inline-block; /* Align content to the right */
+}
+
+#how-it-works ul {
+    list-style-type: disc; /* Style of the bullet points */
+    padding-left: 20px; /* Adjust padding to bring bullets closer to text */
+    margin: 10; /* Remove default margin */
+}
+
+#how-it-works li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+#benefits {
+    text-align: center;
+    padding: 2em;
+    background-color: #f0f0f0; /* Adjust background color as needed */
+}
+
+#benefits h2 {
+    margin-bottom: 1em;
+}
+
+.benefit {
+    cursor: pointer;
+    margin-bottom: 40px;
+    padding-left: 30px; /* Adds space to the left */
+    text-align: left; /* Aligns the text to the left */
+}
+
+.benefit h3 {
+    display: inline;
+    margin-left: 10px; /* Adjust as needed */
+    color: black; /* Default color */
+}
+
+.benefit h3.clicked {
+    color: blue; /* Color when clicked */
+}
+
+.benefit-icon {
+    display: inline;
+    font-size: 20px; /* Adjust size of icon */
+}
+
+.benefit-content {
+    display: none;
+    padding: 15px;
+    color: #555; /* Adjust text color as needed */
+}
+
+#tutor-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns children at start and end of container */
+    padding: 2em;
+    background-color: rgb(175, 182, 218);
+}
+
+.tutor-image {
+    width: 35%; /* Image takes half of the container */
+    height: auto;
+    order: 2; /* Puts the image on the right */
+    margin-right: 150px; /* Space between image and text */
+}
+
+.tutor-description {
+    width: 55%; /* Text takes the other half */
+    order: 1; /* Puts the text on the left */
+    padding-right: 100px; /* Adds some padding between text and image */
+    margin-left: 150px; /* Space between image and text */
+    
+}
+
+
+#online-assistance {
+    padding: 2em;
+    text-align: center;
+}
+
+#online-assistance h2 {
+    margin-bottom: 1em;
+}
+
+#online-assistance ul {
+    list-style-type: disc; /* Adjust as needed */
+    padding-left: 20px; /* Aligns the bullets */
+    text-align: left; /* Aligns the text to the left */
+    display: inline-block; /* Center aligns the list */
+    max-width: 800px; /* Adjust the width as needed */
+}
+
+#online-assistance li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+
+
+footer {
+    background-color: rgb(82, 18, 232);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+
+
+
+/* about us */
+
+
+/* Welcome section */
+#about-us #welcome {
+    padding: 2em;
+    text-align: left;
+}
+
+#about-us #welcome h2 {
+    margin-bottom: 0px; /* Spacing below the title */
+    text-align: center;
+}
+
+#about-us #welcome .content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about-us #welcome .text-container {
+    flex: 1;
+    padding-right: 7px; /* Space between text and image */
+}
+
+#about-us #welcome .image-container {
+    flex: 1;
+    text-align: right; /* Align image to the right */
+}
+
+#about-us #welcome .image-container img {
+    width: 80%;
+    max-width: 500px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Responsive adjustments for Welcome section */
+@media screen and (max-width: 768px) {
+    #about-us #welcome .content-container {
+        flex-direction: column;
+    }
+
+    #about-us #welcome .text-container,
+    #about-us #welcome .image-container {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+
+/* our team*/
+
+
+
+
+/* OurTeam section */
+#about-us #ourteam {
+    padding: 2em;
+    text-align: left;
+}
+
+#about-us #ourteam h2 {
+    margin-bottom: 7px; /* Spacing below the title */
+    text-align: center;
+}
+
+#about-us #ourteam .content-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about-us #ourteam .text-container {
+    flex: 1;
+    padding-left: 20px; /* Space between image and text */
+    order: 2; /* Ensure text is on the right */
+}
+
+#about-us #ourteam .image-container {
+    flex: 1;
+    order: 1; /* Ensure image is on the left */
+    text-align: left; /* Align image to the left */
+}
+
+#about-us #ourteam .image-container img {
+    width: 80%;
+    max-width: 500px; /* Adjust as needed */
+    height: auto;
+}
+
+/* Responsive adjustments for Our Team section */
+@media screen and (max-width: 768px) {
+    #about-us #ourteam .content-container {
+        flex-direction: column-reverse;
+    }
+
+    #about-us #ourteam .text-container,
+    #about-us #ourteam .image-container {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+
+
+
+/* services */
+
+
+
+#about-us #services {
+    display: flex;
+    align-items: flex-start;
+    padding: 2em;
+}
+
+#about-us #services .services-info {
+    flex-basis: 30%; /* Adjust as needed */
+    max-width: 300px; /* Resize services.png image */
+    text-align: center;
+}
+
+#about-us #services .services-info img {
+    width: 100%; /* Adjust image to container width */
+    height: auto;
+}
+
+#about-us #services .services-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-basis: 65%; /* Adjust as needed */
+}
+
+#about-us #services .service-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Adjust width as needed */
+}
+
+#about-us #services .service {
+    display: flex;
+    flex-direction: column; /* Align title and icon vertically */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#about-us #services .service img {
+    width: 100px; /* Resizing icons */
+    height: auto;
+    margin-top: 10px; /* Space between title and icon */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #about-us #services {
+        flex-direction: column;
+    }
+
+    #about-us #services .services-info, 
+    #about-us #services .services-text-container {
+        flex-basis: 100%;
+    }
+
+    #about-us #services .service {
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+/* contact page*/
+
+
+/* Container for the form */
+.form-container {
+    display: flex;
+    justify-content: center; /* Aligns horizontally */
+    align-items: center;     /* Aligns vertically */
+    min-height: 5vh;        /* Adjusts the height of the container */
+    padding: 20px;
+}
+
+/* Style for the form */
+#contact-form {
+    width: 100%;              /* Adjust the width as needed */
+    /* Additional styles for the form (e.g., padding, background) */
+}
+
+
+
+/* Contact Form Styling */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-form input[type="submit"] {
+    background-color: rgb(222, 117, 19);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: rgb(76, 139, 227);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #contact-form {
+        padding: 10px;
+    }
+}
+
+
+/* packages */
+
+.packages-container {
+    display: flex;
+    justify-content: space-around; /* This will space out the packages evenly */
+    align-items: start; /* This aligns items at the start of the container */
+}
+
+.course-package {
+    flex: 1; /* This allows each package to grow and take up equal width */
+    margin: 10px; /* Adds some space between each package */
+    /* You can add more styling here as needed */
+}
+
+
+.course-package img {
+    width: 60%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space between image and title */
+}
+
+
+
+.centered-form {
+    margin-top: 40px; /* Adjust this value as needed for spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.welcome-header h1 {
+    text-align: center;
+    color: rgb(122, 53, 219);
+}
+
+.course-package h2 {
+    color: rgb(238, 0, 255);
+}
+
+.course-package p {
+    color: red;
+    font-size: 1.5em; /* Adjust as needed */
+    font-weight: bold; /* Makes the text bolder */
+    margin: 10px 0; /* Adds space above and below the price */
+}
+
+
+.book-button {
+    padding: 10px 20px; /* Increase button size */
+    background-color: #9c7cd8; 
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px #999; /* Add depth with a shadow */
+    font-size: 1em; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    transition: all 0.3s; /* Smooth transition for hover effects */
+    cursor: pointer; /* Change cursor to signify clickable */
+}
+
+.book-button:hover {
+    background-color: #9c7cd8; /* Darker shade on hover */
+    box-shadow: 0 2px #666; /* Adjust shadow to look like button is pressed */
+    transform: translateY(2px); /* Move the button down to mimic a press */
+}
+
+
+
+
+

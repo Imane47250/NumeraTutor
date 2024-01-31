@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumeraTutor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NumeraTutor Logo" id="logo">
+            <nav>
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('about') }}">About Us</a>
+                <a href="{{ url_for('contact') }}">Contact Us</a>
+                <a href="{{ url_for('signin') }}">Sign Up</a>
+                <a href="{{ url_for('login') }}">Log In</a>
+
+            </nav>
+        </div>
+        
+    </header>
+    
+    <main>
+        <section id="hero">
+            <img src="{{ url_for('static', filename='images/hero.jpg') }}" alt="Hero Image">
+        </section>
+
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <p>NumeraTutor simplifies your journey to mastering mathematics. Start by registering, get to know your tutor, and don't hesitate to book your first session today!</p>
+            <div class="how-it-works-container">
+                <img src="{{ url_for('static', filename='images/learning.png') }}" alt="Learning Image" class="how-it-works-image">
+                <div class="how-it-works-content">
+                    <ul>
+                        <li>Acknowledge your objective behind online courses</li> 
+                        <li>Get to know your tutor by reading the section</li>
+                        <li>Create an account by registering</li>
+                        <li>Check the calendar to book your first session</li>
+                        <li>Make the reservation</li>
+                        <li>We receive your request</li>
+                        <li>We organize the first trial lesson for you</li>
+                        <li>You're starting the lessons!</li> 
+                        <li>We're tracking you to monitor your progress</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits">
+            <h2>Why is it beneficial to work with a private tutor?</h2>
+            <p>If you're considering getting a private tutor, you're probably wondering if it's worth the investment. Private tutoring can be a great way to help you reach your academic goals. Here are some of the benefits of private tutoring that make it worth considering:</p>
+            <div class="benefit" onclick="toggleBenefit('benefit1', this)">
+                <span class="benefit-icon">&#9656;</span>
+                <h3>Individual Attention</h3>
+                <p id="benefit1" class="benefit-content">With a private tutor, you get personalized attention. Unlike classroom lessons, where the teacher has to focus on a large number of students, the home or online teacher is fully dedicated to your progress. This means that it can identify your specific pain points and needs, tailoring course content to your pace and learning style. With this one-on-one attention, you can fill in your gaps more effectively and progress faster.</p>
+            </div>
+            <div class="benefit" onclick="toggleBenefit('benefit2', this)">
+                <span class="benefit-icon">&#9656;</span>
+                <h3>Flexibility and adaptability</h3>
+                <p id="benefit2" class="benefit-content">A private tutor offers a great deal of flexibility in terms of schedules and curriculum. You can arrange class times according to your availability, making it easier for you to juggle your other activities. In addition, the course content can be tailored to your specific needs. If you are struggling in a particular area, the teacher can devote more time and resources to helping you master it. This personalized approach promotes faster and more efficient progress.</p>
+            </div>
+            <div class="benefit" onclick="toggleBenefit('benefit3', this)">
+                <span class="benefit-icon">&#9656;</span>
+                <h3>Confidence & Motivation</h3>
+                <p id="benefit3" class="benefit-content">Working with a private tutor can boost your confidence and motivation. With one-on-one support, you can ask questions without fear of being judged by your peers. The tutor can also provide you with valuable encouragement and advice to help you overcome obstacles and persevere. This relationship of trust and mutual support can help you develop a positive attitude towards learning, boosting your motivation and commitment.</p>
+        
+            </div>
+        </section>
+
+        <section id="tutor-info">
+            <img src="{{ url_for('static', filename='images/tutor.png') }}" alt="Featured Tutor" class="tutor-image">
+            <div class="tutor-description">
+                <h2>Get to know your tutor:</h2>
+                <p>As a current student of Applied Mathematics, and driven by my great passion for this beautiful discipline, I decided to enter the world of tutoring to help others discover the beauty of mathematics and change their perspective towards it. After a teaching experience in a middle school and as well as an incredible experience as a home tutor for students in baccalaureate and higher, I made the decision to embark on e-learning, so that I can open up to other cultures from all over the world and share my knowledge. Determined to make Mathematics more enjoyable rather than a pet peeve for students, I invite you to join me for a first online lesson, individually or in a small group, so that we can discuss your expectations and goals. See you soon for our first session!</p>
+            </div>
+        </section>
+
+
+        <section id="online-assistance">
+            <h2>We Assist You Online</h2>
+            <ul>
+                <li>Course schedule.</li>
+                <li>Video Conferencing & Instant Messaging.</li>
+                <li>Regular feedback and monitoring of your progress.</li>
+                <li>Solving Exercises and Homework.</li>
+            </ul>
+        </section>
+
+
+
+        
+
+
+    
+
+    <footer>
+        <p>© 2023 NumeraTutor</p>
+    </footer>
+
+    <script>
+        function toggleBenefit(benefitId, element) {
+            var content = document.getElementById(benefitId);
+            var isClicked = content.style.display === 'block';
+            content.style.display = isClicked ? 'none' : 'block';
+            var icon = element.querySelector('.benefit-icon');
+            var title = element.querySelector('h3');
+            if (isClicked) {
+                icon.innerHTML = '&#9656;'; // Arrow
+                title.classList.remove('clicked');
+            } else {
+                icon.innerHTML = '&#8722;'; // Minus
+                title.classList.add('clicked');
+            }
+        }
+    </script>
+</body>
+</html>

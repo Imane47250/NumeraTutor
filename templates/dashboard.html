@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumeraTutor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NumeraTutor Logo" id="logo">
+            <nav>
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('about') }}">About Us</a>
+                <a href="{{ url_for('contact') }}">Contact Us</a>
+                <a href="{{ url_for('logout') }}">Log Out</a>
+
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="welcome-header">
+            <h1>Welcome to your personal space </h1>
+        </div>
+
+        <div class="packages-container">
+            <div class="course-package">
+                
+                <h2>Package 1: Basic</h2>
+                <img src="{{ url_for('static', filename='images/pack1.png') }}" alt="Package 1">
+                <p>Price: $200</p>
+                <button class="book-button" data-package="10">Book</button>
+                
+
+            </div>
+        
+            <div class="course-package">
+                <h2>Package 2: Advanced</h2>
+                <img src="{{ url_for('static', filename='images/pack2.png') }}" alt="Package 2">
+                <p>Price: $380</p>
+                <button class="book-button" data-package="20">Book</button>
+                
+
+            </div>
+        
+            <div class="course-package">
+                <h2>Package 3: VIP </h2>
+                <img src="{{ url_for('static', filename='images/pack3.png') }}" alt="Package 3">
+                <p>Price: $550</p>
+                <button class="book-button" data-package="30">Book</button>
+                
+                
+                
+            </div>
+        </div>
+       
+       
+
+
+
+        
+        <!-- Additional dashboard content -->
+    </main>
+    <footer>
+        <p>© 2023 NumeraTutor</p>
+    </footer>
+    
+
+
+
+
+    <script>
+        function showBookingDetails() {
+            const message = `Thank you for choosing this package.
+    In order to book your sessions, you need to proceed to the payment.
+    Here are our bank details for money transfer:
+    RIB: xxxx
+    IBAN: xxxx
+    Bank: xxxx
+    Name: xxxx
+    
+    Don't forget to add a reference number so that we could recognize you. Your reference number should be as follows: [firstname_lastname]`;
+    
+            alert(message);
+        }
+    
+        // Add event listeners to the book buttons
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const bookButtons = document.querySelectorAll('.book-button');
+            bookButtons.forEach(button => {
+                button.addEventListener('click', showBookingDetails);
+            });
+        });
+    </script>
+    
+</body>
+
+
+</html>
+
+

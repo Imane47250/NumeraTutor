@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NumeraTutor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="NumeraTutor Logo" id="logo">
+            <nav>
+                <a href="{{ url_for('home') }}">Home</a>
+                <a href="{{ url_for('about') }}">About Us</a>
+                <a href="{{ url_for('contact') }}">Contact Us</a>
+                <a href="{{ url_for('signin') }}">Sign Up</a>
+                <a href="{{ url_for('login') }}">Log In</a>
+
+            </nav>
+        </div>
+        
+    </header>
+
+    <div id="about-us">
+        <section id="welcome">
+            <h2>Welcome to NumeraTutor</h2>
+            <div class="content-container">
+                <div class="text-container">
+                    <p>Welcome to Numeratutor, your platform for online math tutoring courses for all grade levels from middle school to the first years of the bachelor's degree. We are committed to providing top-quality, personalized tutoring services to help students succeed academically and achieve their goals.</p>
+                </div>
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/1.png') }}" alt="Welcome Image">
+                </div>
+            </div>
+        </section>
+
+
+        <section id="ourteam">
+            <h2>Our team</h2>
+            <div class="content-container">
+                <div class="text-container">
+                    <p>Our team remains at your disposal to put you in touch with your teacher and provide you with lessons according to your availability. We welcome your messages and are particularly keen to understand your needs.</p>
+                </div>
+                <div class="image-container">
+                    <img src="{{ url_for('static', filename='images/2.png') }}" alt="Our Team">
+                </div>
+            </div>
+        </section>
+    
+        
+
+        <section id="services">
+            
+            <div class="services-info">
+                <h2>Our Services</h2>
+                <img src="{{ url_for('static', filename='images/services.png') }}" alt="Services">
+                
+            </div>
+            <div class="services-text-container">
+                <!-- First Column -->
+                <div class="service-column">
+                    <!-- Online Tutoring -->
+                    <div class="service">
+                        <h3>Online Tutoring</h3>
+                        <img src="{{ url_for('static', filename='images/icon1.png') }}" alt="Online Tutoring">
+                        <p>Our tutors work with online students to create personalized study plans that meet their specific academic needs and help build their confidence.</p>
+                    </div>
+                    <!-- Matching -->
+                    <div class="service">
+                        <h3>Matching</h3>
+                        <img src="{{ url_for('static', filename='images/icon2.png') }}" alt="Matching">
+                        <p>Our team identify students' needs, goals, personality and overall living environment. This approach allows the tutor to adapt to the student's needs to create the perfect duo.</p>
+                    </div>
+                </div>
+                <!-- Second Column -->
+                <div class="service-column">
+                    <!-- Interactive Courses -->
+                    <div class="service">
+                        <h3>Interactive Courses</h3>
+                        <img src="{{ url_for('static', filename='images/icon3.png') }}" alt="Interactive Courses">
+                        <p>Numeratutor's platform offers features that optimize students' human interaction: high-quality video conferencing that resists connection fluctuations, instant messaging, an integrated calendar....</p>
+                    </div>
+                    <!-- Following the Progression -->
+                    <div class="service">
+                        <h3>Following the Progression</h3>
+                        <img src="{{ url_for('static', filename='images/icon4.png') }}" alt="Following the Progression">
+                        <p>We offer an instant feedback system by sending notifications about the details of your children's sessions. Also, our customer support is always at your disposal to deal with any request related to the course of the course.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer>
+        <p>© 2023 NumeraTutor</p>
+    </footer>
+</body>
+</html>
+

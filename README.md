@@ -3,10 +3,6 @@
 ## Introduction
 Welcome to Numeratutor, an interactive platform dedicated to connecting learners with experienced mathematical tutors for online sessions. Our goal is to make quality math education accessible and personalized for everyone, anywhere.
 
-Check out Numeratutor:
-- **Deployed Site**: [Numeratutor Live](https://numeratutor-51f6e9b360bc.herokuapp.com/)
-- **Author's LinkedIn**: [Imane Elaceri](https://www.linkedin.com/in/imane-elaceri/)
-
 ## Installation
 To get started with Numeratutor on your local machine, follow these steps:
 
